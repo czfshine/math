@@ -1,0 +1,204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5086,        195]
+NotebookOptionsPosition[      3706,        136]
+NotebookOutlinePosition[      4064,        152]
+CellTagsIndexPosition[      4021,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\n", "\:51fd\:6570\:8c03\:7528"}]], "Input",
+ CellID->1],
+
+Cell[BoxData[
+ RowBox[{"Range", "[", "10", "]"}]], "Input",
+ CellID->2],
+
+Cell[BoxData["\:8d4b\:503c"], "Input",
+ CellID->8],
+
+Cell[BoxData[
+ RowBox[{"x", "=", "1"}]], "Input",
+ CellID->9],
+
+Cell[BoxData[{
+ RowBox[{"t", ":=", " ", "Now"}], "\n", "t", "\n"}], "Input",
+ CellID->15],
+
+Cell[BoxData[
+ RowBox[{"x", "=."}]], "Input",
+ CellID->22],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", "n", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "4", ",", " ", "10", ",", " ", "1"}], "}"}]}], 
+  "]"}]], "Input",
+ CellID->23],
+
+Cell[BoxData[
+ RowBox[{"s", " ", "=", " ", "SparseArray", "[", "{", "{", "1", ",", " ", "1",
+   "}", " ", "\[Rule]", " ", "1", ",", " ", "{", "2", ",", " ", "2", "}", " ",
+   "\[Rule]", " ", "2", ",", " ", "{", "3", ",", " ", "3", "}", " ", 
+  "\[Rule]", " ", "3", ",", " ", "{", "1", ",", " ", "3", "}", " ", "\[Rule]",
+   " ", "4", "}", "]"}]], "Input",
+ CellID->32],
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", "s", "]"}]], "Input",
+ CellID->39],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", "x", "^", "2", " ", "+", " ", "y", "^", "3", " ", 
+  "<", " ", "2", ",", " ", "{", "x", ",", " ", "-", "2", ",", " ", "2", "}", 
+  ",", " ", "{", "y", ",", " ", "-", "2", ",", " ", "2", "}", "]"}]], "Input",
+ CellID->48],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\"\<test.gif\>\"", ",", " ", "Plot", "[", "Sin", "[",
+   "x", "]", ",", " ", "{", "x", ",", " ", "0", ",", " ", "10", "}", "]", 
+  "]"}]], "Input",
+ CellID->64],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<test.gif\>\"", "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<test.gif\>\"", "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", "x", "^", "2", "==", "1", ",", "x", "]"}]], "Input",
+ CellID->77],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", "x", "^", "2", "+", "1", "==", "-", "1", ",", "x", ",",
+   "Complexes", "]"}]], "Input",
+ CellID->83],
+
+Cell[BoxData[
+ RowBox[{"f", "[", "a_", ",", "b_", ",", "c_", "]", ":=", "Solve", "[", "a", 
+  "*", "x", "^", "2", "+", "b", "*", "x", "+", "c", "==", "0", ",", "x", ",", 
+  "Complexes", "]"}]], "Input",
+ CellID->99],
+
+Cell[BoxData[
+ RowBox[{"f", "[", "1", ",", "2", ",", "3", "]"}]], "Input",
+ CellID->100],
+
+Cell[BoxData[
+ RowBox[{"%", " ", "+", "1"}]], "Input",
+ CellID->111],
+
+Cell[BoxData[
+ RowBox[{"g", "[", "x_", "]", ":=", "x", "+", "1"}]], "Input",
+ CellID->117],
+
+Cell[BoxData[
+ RowBox[{"g", "[", "%", "]"}]], "Input",
+ CellID->118],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"g", "[", 
+   RowBox[{"f", "[", 
+    RowBox[{"1", ",", "2", ",", "3"}], "]"}], "]"}]}]], "Input",
+ CellID->134],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", "f", "[", "a", ",", "b", ",", "c", "]", ",", "{", "{", 
+  "1", ",", "2", ",", "3", "}", ",", "{", "1", ",", "2", ",", "3", "}", ",", 
+  "{", "1", ",", "2", ",", "3", "}", "}", "]"}]], "Input",
+ CellID->140],
+
+Cell[BoxData[
+ RowBox[{"a", "=", "f", "[", "1", ",", "2", ",", "3", "]"}]], "Input",
+ CellID->166],
+
+Cell[BoxData[
+ RowBox[{"g", "[", "x", "]", "/.", "a"}]], "Input",
+ CellID->172]
+},
+WindowSize->{775, 703},
+WindowMargins->{{324, Automatic}, {Automatic, 54}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (2015\:5e7412\:670810\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 80, 2, 52, "Input",
+ CellID->1],
+Cell[641, 24, 71, 2, 48, "Input",
+ CellID->2],
+Cell[715, 28, 50, 1, 31, "Input",
+ CellID->8],
+Cell[768, 31, 61, 2, 31, "Input",
+ CellID->9],
+Cell[832, 35, 89, 2, 90, "Input",
+ CellID->15],
+Cell[924, 39, 58, 2, 31, "Input",
+ CellID->22],
+Cell[985, 43, 225, 7, 48, "Input",
+ CellID->23],
+Cell[1213, 52, 368, 6, 48, "Input",
+ CellID->32],
+Cell[1584, 60, 76, 2, 48, "Input",
+ CellID->39],
+Cell[1663, 64, 262, 4, 48, "Input",
+ CellID->48],
+Cell[1928, 70, 199, 4, 48, "Input",
+ CellID->64],
+Cell[2130, 76, 99, 2, 48, "Input"],
+Cell[2232, 80, 99, 2, 48, "Input"],
+Cell[2334, 84, 102, 2, 48, "Input",
+ CellID->77],
+Cell[2439, 88, 138, 3, 48, "Input",
+ CellID->83],
+Cell[2580, 93, 215, 4, 48, "Input",
+ CellID->99],
+Cell[2798, 99, 88, 2, 31, "Input",
+ CellID->100],
+Cell[2889, 103, 68, 2, 31, "Input",
+ CellID->111],
+Cell[2960, 107, 90, 2, 31, "Input",
+ CellID->117],
+Cell[3053, 111, 68, 2, 31, "Input",
+ CellID->118],
+Cell[3124, 115, 151, 5, 52, "Input",
+ CellID->134],
+Cell[3278, 122, 241, 4, 48, "Input",
+ CellID->140],
+Cell[3522, 128, 98, 2, 31, "Input",
+ CellID->166],
+Cell[3623, 132, 79, 2, 31, "Input",
+ CellID->172]
+}
+]
+*)
+
+(* End of internal cache information *)

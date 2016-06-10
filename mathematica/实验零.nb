@@ -1,0 +1,308 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7547,        298]
+NotebookOptionsPosition[      5647,        219]
+NotebookOutlinePosition[      6005,        235]
+CellTagsIndexPosition[      5962,        232]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["\:65b9\:7a0b\:6c42\:6839"], "Input",
+ CellID->1],
+
+Cell[BoxData["\:57fa\:672c\:51fd\:6570"], "Input",
+ CellID->2],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", "x", "^", "2", "==", "1", ",", "x", ",", "Complexes", 
+  "]"}]], "Input",
+ CellID->3],
+
+Cell[BoxData["\:4e8c\:6b21\:51fd\:6570"], "Input",
+ CellID->9],
+
+Cell[BoxData[
+ RowBox[{"two", "[", "a_", ",", "b_", ",", "c_", "]", ":=", "Solve", "[", "a",
+   "*", "x", "^", "2", "+", "b", "*", "x", "+", "c", "==", "0", ",", "x", ",",
+   "Complexes", "]"}]], "Input",
+ CellID->15],
+
+Cell[BoxData[
+ RowBox[{"two", "[", "2", ",", "3", ",", "4", "]"}]], "Input",
+ CellID->18],
+
+Cell[BoxData["\:5e94\:7528\:7ed3\:679c"], "Input",
+ CellID->29],
+
+Cell[BoxData[
+ RowBox[{"tonum", "[", "x_", "]", ":=", "{", "Re", "[", "x", "]", ",", "Im", 
+  "[", "x", "]", "}"}]], "Input",
+ CellID->35],
+
+Cell[BoxData[
+ RowBox[{"tonum", "[", "x", "]", "/.", "two", "[", "2", ",", "3", ",", "4", 
+  "]"}]], "Input",
+ CellID->36],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{"t", "[", "y_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"tonum", "[", "x", "]"}], "/.", "y"}]}]}]], "Input",
+ CellID->192],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"t", "[", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "1"}], "}"}], "]"}]}]], "Input",
+ CellID->197],
+
+Cell[BoxData[""], "Input",
+ CellID->195],
+
+Cell[BoxData["\:5e94\:7528\:53c2\:6570"], "Input",
+ CellID->47],
+
+Cell[BoxData[
+ RowBox[{"Apply", "[", "two", ",", "{", "1", ",", "2", ",", "3", "}", 
+  "]"}]], "Input",
+ CellID->48],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"two", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"4", ",", "5", ",", "6"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", "1", "}"}]}], "]"}]}]], "Input",
+ CellID->90],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", 
+        RowBox[{
+         RowBox[{"-", "1"}], "-", 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SqrtBox["2"]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SqrtBox["2"]}]}]}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", 
+        RowBox[{
+         FractionBox["1", "8"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "5"}], "-", 
+           RowBox[{"\[ImaginaryI]", " ", 
+            SqrtBox["71"]}]}], ")"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", 
+        RowBox[{
+         FractionBox["1", "8"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "5"}], "+", 
+           RowBox[{"\[ImaginaryI]", " ", 
+            SqrtBox["71"]}]}], ")"}]}]}], "}"}]}], "}"}]}], "}"}], 
+  "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", "t", ",", "{", "x", "\[Rule]", "1", ",", "x", "\[Rule]", 
+  "2", "}", "]"}]], "Input",
+ CellID->141],
+
+Cell[BoxData["\:8868\:683c"], "Input",
+ CellID->54],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", "x", "+", "1", ",", "{", "x", ",", "{", "1", ",", "2", 
+  ",", "3", "}", "}", "]"}]], "Input",
+ CellID->55],
+
+Cell[BoxData["\:4e8c\:7ef4\:8868\:683c"], "Input",
+ CellID->67],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", "{", "x", ",", "y", "}", ",", "{", "x", ",", "{", "1", 
+  ",", "2", ",", "3", "}", "}", ",", "{", "y", ",", "{", "4", ",", "5", ",", 
+  "6", "}", "}", "]"}]], "Input",
+ CellID->68],
+
+Cell[BoxData["\:8fed\:4ee3\:53c2\:6570"], "Input",
+ CellID->80],
+
+Cell[BoxData[
+ RowBox[{"arg", "[", "a_", ",", "b_", ",", "c_", "]", ":=", "Table", "[", "{",
+   "x", ",", "y", ",", "z", "}", ",", "{", "x", ",", "Range", "[", "a", "]", 
+  "}", ",", "{", "y", ",", "Range", "[", "b", "]", "}", ",", "{", "z", ",", 
+  "Range", "[", "c", "]", "}", "]"}]], "Input",
+ CellID->81],
+
+Cell[BoxData[
+ RowBox[{"b", "=", "arg", "[", "5", ",", "4", ",", "3", "]"}]], "Input",
+ CellID->82],
+
+Cell[BoxData["\:4e3b\:51fd\:6570"], "Input",
+ CellID->116],
+
+Cell[BoxData[
+ RowBox[{"main", "[", "]", ":=", "Apply", "[", "two", ",", "arg", "[", "5", 
+  ",", "5", ",", "5", "]", ",", "{", "3", "}", "]"}]], "Input",
+ CellID->117],
+
+Cell[BoxData[
+ RowBox[{"main", "[", "]"}]], "Input",
+ CellID->123],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"out", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"t", ",", 
+     RowBox[{"main", "[", "]"}]}], "]"}]}]}]], "Input",
+ CellID->216],
+
+Cell[BoxData[
+ RowBox[{"Dimensions", "[", "out", "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"outlist", "=", 
+   RowBox[{"{", "}"}]}]}]], "Input",
+ CellID->455],
+
+Cell[BoxData[
+ RowBox[{"tt", "[", "x_", "]", ":=", "Append", "[", "outlist", ",", "x", 
+  "]"}]], "Input",
+ CellID->443],
+
+Cell[BoxData[""], "Input",
+ CellID->454],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", "tt", ",", "{", "out", "}", ",", "{", "5", "}", 
+  "]"}]], "Input",
+ CellID->234],
+
+Cell[BoxData["outlist"], "Input",
+ CellID->472]
+},
+WindowSize->{1440, 827},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (2015\:5e7412\:670810\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 62, 1, 31, "Input",
+ CellID->1],
+Cell[623, 23, 62, 1, 31, "Input",
+ CellID->2],
+Cell[688, 26, 122, 3, 48, "Input",
+ CellID->3],
+Cell[813, 31, 62, 1, 31, "Input",
+ CellID->9],
+Cell[878, 34, 217, 4, 48, "Input",
+ CellID->15],
+Cell[1098, 40, 89, 2, 31, "Input",
+ CellID->18],
+Cell[1190, 44, 63, 1, 31, "Input",
+ CellID->29],
+Cell[1256, 47, 138, 3, 48, "Input",
+ CellID->35],
+Cell[1397, 52, 122, 3, 31, "Input",
+ CellID->36],
+Cell[1522, 57, 172, 6, 52, "Input",
+ CellID->192],
+Cell[1697, 65, 142, 5, 52, "Input",
+ CellID->197],
+Cell[1842, 72, 40, 1, 31, "Input",
+ CellID->195],
+Cell[1885, 75, 63, 1, 31, "Input",
+ CellID->47],
+Cell[1951, 78, 116, 3, 48, "Input",
+ CellID->48],
+Cell[2070, 83, 332, 11, 68, "Input",
+ CellID->90],
+Cell[2405, 96, 1127, 39, 62, "Input"],
+Cell[3535, 137, 135, 3, 48, "Input",
+ CellID->141],
+Cell[3673, 142, 51, 1, 31, "Input",
+ CellID->54],
+Cell[3727, 145, 144, 3, 48, "Input",
+ CellID->55],
+Cell[3874, 150, 63, 1, 31, "Input",
+ CellID->67],
+Cell[3940, 153, 217, 4, 48, "Input",
+ CellID->68],
+Cell[4160, 159, 63, 1, 31, "Input",
+ CellID->80],
+Cell[4226, 162, 308, 5, 48, "Input",
+ CellID->81],
+Cell[4537, 169, 99, 2, 31, "Input",
+ CellID->82],
+Cell[4639, 173, 58, 1, 31, "Input",
+ CellID->116],
+Cell[4700, 176, 168, 3, 48, "Input",
+ CellID->117],
+Cell[4871, 181, 66, 2, 31, "Input",
+ CellID->123],
+Cell[4940, 185, 169, 6, 68, "Input",
+ CellID->216],
+Cell[5112, 193, 86, 2, 48, "Input"],
+Cell[5201, 197, 107, 4, 52, "Input",
+ CellID->455],
+Cell[5311, 203, 120, 3, 48, "Input",
+ CellID->443],
+Cell[5434, 208, 40, 1, 31, "Input",
+ CellID->454],
+Cell[5477, 211, 116, 3, 48, "Input",
+ CellID->234],
+Cell[5596, 216, 47, 1, 31, "Input",
+ CellID->472]
+}
+]
+*)
+
+(* End of internal cache information *)
+
